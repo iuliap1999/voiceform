@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+$Poppins: "Poppins", sans-serif;
+
+$theme: (
+    --primary: #31a1fd,
+    --secondary: #269b32,
+    --bg: #f9fcf8,
+    --error: rgb(177, 3, 3),
+    --warning: rgb(214, 195, 20),
+    --headerHeight: 90px,
+    --md: 768px,
+    --lg: 1080px,
+);
+
+$theme: (
+    --primary-blue: #217ebb,
+    --light-blue: #5bc0de,
+    --dark-blue: #2c3c50,
+    --accent-blue: #7fb3d5,
+    --text: #FFF,
+
+    // Neutral Colors
+    --background: #ecf0f1,
+    --texr: #333333,
+    --button-hover: #2980b9,
+    --link: #3498db,
+    --border: #bdc3c7,
+
+    // State Colors
+    --success: #2ecc71,
+    --warning: #f39c12,
+    --alert: #cf3423,
+);
+
+// $theme: (
+//   --background-primary: #FFFAE4,
+//   --background-secondary: #003235,
+//   --primary: #003235,
+//   --primary-950:  #003235,
+//   --primary-disabled: #000a0a,
+//   --secondary: #808000,
+//   --secondary-50: #FFFAE4,
+//   --secondary-100: #FFF7C4,
+//   --secondary-500: #E5DE00,
+//   --secondary-300: #FFF050,
+//   --secondary-600: #B8B800,
+//   --secondary-950: #303400,
+//   --success: #035E24,
+//   --warning: #FFC43D,
+//   --alert: #FF1E1E,
+//   --primary-border: #3d3d3d,
+//   --message-bubble: #808000,
+//   --text: white,
+//   --message-user: linear-gradient(274deg, #EDE6FB 0%, #E8DCFF 100%),
+//   --message-assistant: linear-gradient(274deg, #E6F3FB 0%, #DCF7FF 100%)
+// );
+
+// colors
+$dark: rgb(0, 95, 158);
+$light: #fff;
+$primary: rgb(36, 36, 255);
+$primary-light: rgb(201, 201, 253);
+$secondary: white;
+$bg: rgb(244, 244, 255);
+
+// spacing
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+// border radius
+$borderRadius: 12px;
+
+// header height
+$headerHeight: 90px;
+
+// breakpoints
+
+$md: 768px;
+
+@mixin breakpoint($point) {
+    @if $point == md {
+        // 768px
+        @media (min-width: 48em) {
+            @content;
+        }
+    }
+}
+
+@mixin spread-map($map: ()) {
+  @each $key, $value in $map {
+      #{$key}: $value;
+  }
+}

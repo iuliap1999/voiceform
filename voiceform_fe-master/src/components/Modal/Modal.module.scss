@@ -1,0 +1,17 @@
+.modal {
+  min-height: 30svh;
+  max-height: 80vh;
+  min-width: 30svw;
+  max-width: 600px;
+  border-radius: 16px;
+  overflow: auto;
+  align-self: center;
+  background-color: #e6e6e6;
+  padding: 15px;
+  display: flex;
+  margin: 10px;
+
+  @media (max-width: 880px) {
+    max-width: 100svw !important;
+  }
+}
